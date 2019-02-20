@@ -1,0 +1,934 @@
+//colors
+$grey: #3f3f3f
+$blue: #0f4c97
+$light-blue: #2da9dc
+$lightred: #ff4d6b
+
+
+@font-face
+  font-family: "simplejoy"
+  src: url('../fonts/simple joys.ttf')
+
+body
+  font-family: 'ProximaNova', sans-serif
+  //color: $grey
+
+.container
+  margin: 0 auto
+  width: 1280px
+
+a
+  text-decoration: none
+
+h3
+  font-size: 32px
+  letter-spacing: -0.5px
+  font-weight: 800
+  color: $grey
+  text-transform: uppercase
+  margin-top: 120px
+  text-align: center
+
+header
+  margin: 21px 0
+  z-index: 20
+
+  .mobile-menu
+    display: none
+
+  .search-bar
+    width: 100%
+    height: 0px
+    top: 80px
+    background: white
+    position: absolute
+    z-index: 10
+    overflow: hidden
+    transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1)
+
+    .container
+      display: flex
+      align-items: baseline
+    .left-container
+      margin-left: 25%
+      width: 53%
+      margin-top: 45px
+      position: relative
+
+      input
+        width: 100%
+        padding-bottom: 20px
+        line-height: 1.5
+        font-size: 20px
+        color: #737373
+        border: none
+        border-bottom: 1px solid $grey
+        margin-bottom: 20px
+        &:focus
+          outline: 0
+          border-bottom: 1px solid $lightred
+
+      button
+        position: absolute
+        right: 0
+        top: 0
+        background: none
+        border: none
+        cursor: pointer
+
+      .list
+        display: flex
+        flex-direction: column
+        a
+          font-size: 14px
+          line-height: 1.5
+          font-weight: bold
+          color: #4a4a4a
+          letter-spacing: 0.3px
+          margin-bottom: 10px
+          transition: color 0.1s ease-out
+          &:hover
+            color: $lightred
+
+
+        .main-par
+          font-size: 12px
+          color: #c6c6c6
+          line-height: 2
+          font-weight: 600
+          text-transform: uppercase
+
+    .right-close
+
+
+      .close-container
+        position: relative
+        width: 20px
+        height: 20px
+        cursor: pointer
+        &:hover
+          .leftright
+            transform: rotate(-45deg)
+            background-color: $lightred
+          .rightleft
+            transform: rotate(45deg)
+            background-color: $lightred
+
+      .leftright
+        height: 1px
+        width: 20px
+        position: absolute
+        margin-top: 10px
+        background-color: $grey
+        transform: rotate(45deg)
+        transition: all .2s ease-in
+
+
+      .rightleft
+        height: 1px
+        width: 20px
+        position: absolute
+        margin-top: 10px
+        background-color: $grey
+        border-radius: 2px
+        transform: rotate(-45deg)
+        transition: all .2s ease-in
+
+
+      .label
+        color: $grey
+        font-size: .6em
+        text-transform: uppercase
+        letter-spacing: 2px
+        transition: all .3s ease-in
+        opacity: 0
+        display: none
+
+      .close
+        margin: 60px 0 0 5px
+        position: absolute
+        opacity: 0
+
+  .background-full
+    height: 0%
+    width: 100%
+    position: absolute
+    top: 85px
+    z-index: 1
+    transition: height 0.5s cubic-bezier(0.86, 0, 0.07, 1)
+    background-color: rgba(0,0,0,0.4)
+
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    .logo
+      display: flex
+      align-items: center
+      img
+        margin-right: 8px
+      &::after
+        content: "Careers"
+        font-size: 20px
+        font-weight: bold
+        color: black
+
+    nav
+      a
+        margin-right: 39px
+        font-size: 16px
+        color: $grey
+
+    .side
+      display: flex
+      align-items: center
+      a
+        margin-right: 31px
+        font-size: 14px
+        display: flex
+        align-items: center
+        color: #1f1f1f
+        &:last-child
+          margin-right: 0
+        img
+          margin-right: 8px
+
+#header-background
+  background-image: url(../imgs/background.jpg)
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  width: 100%
+  height: 716px
+  display: flex
+  align-items: center
+  justify-content: center
+
+  .content-inside
+    border-top: 20px solid white
+    border-left: 20px solid white
+    height: 603px
+    width: 1280px
+    position: relative
+    &:after
+      content: ""
+      position: absolute
+      right: 0
+      top: 0
+      height: 63%
+      width: 20px
+      background-color: white
+    &:before
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 79%
+      height: 20px
+      background-color: white
+
+    .wrapper
+      margin-left: 80px
+      margin-top: 114px
+
+      .curly
+        font-size: 120px
+        //letter-spacing: -2.4px
+        font-family: "simplejoy" , sans-serif
+        font-weight: lighter
+        position: relative
+        color: $light-blue
+        margin: 0
+        z-index: 2
+
+      .big
+        font-size: 63px
+        color: white
+        text-transform: uppercase
+        font-weight: 800
+        margin-top: -30px
+        letter-spacing: -2px
+
+      .double-input
+        .search-form
+          width: 336px
+          height: 48px
+          margin-right: 10px
+          margin-top: 20px
+
+        input
+          box-sizing: border-box
+          padding-left: 15px
+          line-height: 1.71
+          letter-spacing: 0.3px
+          font-size: 14px
+          border: none
+        ::placeholder
+          color: #686868
+
+        button
+          width: 144px
+          height: 48px
+          color: white
+          background-color: $light-blue
+          border: none
+          cursor: pointer
+          transition: all 0.1s ease-out
+          &:hover
+            background: $blue
+
+  .nav-dots
+    display: flex
+    justify-content: center
+    margin-top: 130px
+    li
+      width: 10px
+      height: 10px
+      transform: rotate(-315deg)
+      border: 1px solid white
+      margin-right: 15px
+      list-style: none
+      cursor: pointer
+      transition: all 0.1s ease-out
+      &:last-child
+        margin-right: 0
+      &:hover
+        background: white
+    .active
+      background-color: white
+
+#second-section
+  background-color: $blue
+  padding: 36px 0
+  color: white
+  .row
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    .left-side
+      .first-line
+        font-size: 24px
+        margin: 0
+      .second-line
+        font-size: 17px
+        font-weight: 300
+        margin: 0
+        margin-top: 7px
+
+    .btn
+      width: 224px
+      height: 44px
+      background-color: white
+      color: #006ac3
+      display: flex
+      justify-content: center
+      align-items: center
+      font-size: 16px
+      cursor: pointer
+      transition: all 0.1s ease-out
+      &:hover
+        background-color: $light-blue
+        color: white
+        span
+          color: $blue
+    span
+      font-weight: 700
+      transition: all 0.1s ease-out
+
+#section-three
+  .container
+    h3
+      text-align: center
+      margin-bottom: 45px
+
+    .cards
+      display: flex
+      justify-content: space-between
+
+      .card
+        width: 32%
+        height: 459px
+        background-color: #686868
+        position: relative
+        z-index: 1
+        overflow: hidden
+
+        img
+        .overlay
+          background-image: linear-gradient(to top, #000000, rgba(0, 0, 0, 0))
+          width: 100%
+          height: 200%
+          transform: translateY(-69%)
+          z-index: 2
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: center
+          color: white
+          text-align: center
+          transition: all 0.3s ease-out
+          &:hover
+            transform: translateY(-100%)
+
+          h4
+            font-size: 18px
+            font-weight: bolder
+            margin: 0
+            margin-bottom: 15px
+            letter-spacing: -0.2px
+            margin-top: 450px
+          span
+            font-weight: 300
+          .cards-par
+            width: 60%
+            font-size: 16px
+            line-height: 1.5
+            margin-top: 38px
+
+          .btn-card
+            width: 176px
+            height: 44px
+            border: 2px solid white
+            display: flex
+            justify-content: center
+            align-items: center
+            color: white
+            margin-top: 40px
+            transition: all 0.1s ease-out
+            &:hover
+              background-color: white
+              color: rgba(0,0,0,1)
+
+#section-four
+  display: flex
+  flex-direction: column
+  align-items: center
+  .container
+    text-align: center
+    .square-row
+      display: flex
+      justify-content: space-around
+
+      .square
+        margin-top: 60px
+        width: 225px
+        height: 225px
+        border: 1px solid #e3e3e3
+        transform: rotate(45deg)
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        transition: all 0.2s ease-out
+        color: white
+        &:hover
+          //border: 1px solid $blue
+          background: $blue
+          z-index: 10
+          .inside
+            p
+              color: white
+            svg
+              transform: scale(1.1)
+            svg g
+              stroke: white
+            svg g Path
+                stroke: white
+
+
+        .inside
+          transform: rotate(-45deg)
+
+          svg
+            transform: scale(1)
+            transition: all 0.2s ease-out
+
+          .square-rotate
+            font-size: 18px
+            font-weight: 600
+            color: $blue
+            letter-spacing: -0.2px
+            line-height: 1.4
+            margin-bottom: 0
+
+          .number
+            font-size: 16px
+            color: $grey
+            letter-spacing: -0.2px
+            margin-top: 10px
+
+    .square-row-second
+      display: flex
+      justify-content: center
+      margin-bottom: 85px
+
+      .square
+        width: 225px
+        height: 225px
+        border: 1px solid #e3e3e3
+        transform: rotate(45deg)
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        transition: all 0.2s ease-out
+        margin-right: 93px
+        margin-top: -67px
+        &:last-child
+          margin-right: 0
+        &:hover
+          //border: 1px solid $blue
+          background: $blue
+          z-index: 10
+          .inside
+            p
+              color: white
+            svg
+              transition: all 0.1s ease-out
+              transform: scale(1.1)
+              g
+                stroke: white
+              path
+                stroke: white
+
+        .inside
+          transform: rotate(-45deg)
+
+          svg
+            transform: scale(1)
+            transition: all 0.2s ease-out
+
+          .square-rotate
+            font-size: 18px
+            font-weight: 600
+            color: $blue
+            letter-spacing: -0.2px
+            line-height: 1.4
+            margin-bottom: 0
+
+          .number
+            font-size: 16px
+            color: $grey
+            letter-spacing: -0.2px
+            margin-top: 10px
+
+  .btn-load
+    font-size: 18px
+    font-weight: 600
+    color: $blue
+    text-align: center
+    line-height: 1.33
+    border-bottom: 1px solid $blue
+    cursor: pointer
+    transition: all 0.1s ease-out
+    &:hover
+      color: $light-blue
+      border-bottom: 1px solid $light-blue
+
+#section-fifth
+  .story-img
+    width: 100%
+    height: 560px
+    background-image: url("../imgs/big-image.jpg")
+    background-position: center
+    background-size: cover
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+
+    .navigation-dots
+      display: flex
+      position: absolute
+      bottom: 85px
+      .dot
+        width: 10px
+        height: 10px
+        border: 1px solid white
+        margin-right: 15px
+        box-sizing: border-box
+        transform: rotate(-315deg)
+        cursor: pointer
+        transition: all 0.1s ease-out
+        &:last-child
+          margin-right: 0
+        &:hover
+          background: white
+
+      .active
+        background: white
+
+    .container
+      width: 1008px
+      margin: 0 auto
+      position: absolute
+      margin-top: -20px
+
+      .btn-hover-right
+        position: absolute
+        z-index: 10
+        right: 0
+        display: block
+        transform: rotate3d(0, 0, 0, 0deg)
+        cursor: pointer
+        transform-style: preserve-3d
+        transition: all 0.7s ease-out
+        &:hover
+          transform: rotate3d(0, 1, 0, 360deg)
+          transform-style: preserve-3d
+          svg g Path
+            fill: $light-blue
+        svg
+
+
+
+      .btn-hover-left
+        position: absolute
+        z-index: 10
+        display: block
+        svg
+          display: block
+          transform: rotate3d(0, 0, 0, 0deg)
+          cursor: pointer
+          transform-style: preserve-3d
+          transition: all 0.7s ease-out
+          &:hover
+            transform: rotate3d(0, 1, 0, -360deg)
+            g Path
+              fill: $light-blue
+
+    .holder
+      width: 956px
+      height: 400px
+      margin: 0 auto
+      overflow: hidden
+      padding-top: 110px
+      position: relative
+
+      .slides
+        width: 200%
+        height: 100%
+        display: block
+        transform: translateX(0)
+        transition: transform 0.3s ease-out
+
+        .slider
+          background-color: white
+          display: flex
+          height: 308px
+          width: 956px
+          float: left
+          .left-side
+            width: 37%
+            text-align: center
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            position: relative
+
+            .image
+              img
+                margin-top: -110px
+
+            .line
+              margin-top: 30px
+              width: 80px
+              height: 1px
+              background: #d1d1d1
+
+            .curly-font
+              font-family: "simplejoy", sans-serif
+              font-size: 44px
+              letter-spacing: -0.9px
+              color: $blue
+              font-weight: 400
+              margin-top: 17px
+              margin-bottom: 0
+            p
+              font-size: 14px
+              color: $grey
+              margin-top: -5px
+
+          .right-side
+            width: 63%
+            display: flex
+            justify-content: center
+            align-items: center
+
+            p
+              width: 392px
+              font-size: 24px
+              font-weight: 600
+              font-style: italic
+              line-height: 1.71
+
+
+
+
+#challenged-area
+  .container
+    width: 1400px
+    .accordion
+      width: 100%
+      height: 150px
+      display: flex
+      margin-bottom: 200px
+
+      .page
+        width: 35%
+        transition: all 0.3s ease-out
+        display: flex
+        align-items: center
+        justify-content: center
+        overflow: hidden
+        position: relative
+
+        .line
+          position: absolute
+          right: 0
+          background: #e1e1e1
+          height: 88px
+          width: 1px
+
+
+        .left-area
+          text-align: center
+          padding: 40px
+          white-space: nowrap
+          transition: all 0.4s ease-out
+          p
+            font-size: 20px
+            font-weight: 600
+            color: $grey
+            margin: 0
+            margin-top: 13px
+          svg Path
+            stroke: $grey
+
+        .right-area
+          display: none
+          p
+            //padding-left: 50px
+            font-size: 16px
+            color: $grey
+            line-height: 1.56
+            width: 400px
+
+
+      .expand
+        width: 100%
+        .left-area
+          padding: 40px
+          svg Path
+            stroke: $blue
+          svg g g path
+            stroke: $blue
+            fill: $blue
+
+          p
+            color: $blue
+        .right-area
+          display: block
+
+
+@media screen and (max-width: 1350px)
+  .container
+    width: 90%
+
+  header
+    .container
+      nav
+        display: none
+      .mobile-menu
+        display: block
+        cursor: pointer
+      .side
+        display: none
+
+  #header-background
+    .content-inside
+      width: 90%
+
+  #section-three
+    .container
+      .cards
+        flex-wrap: wrap
+        justify-content: space-evenly
+
+        .card
+          width: 408px
+          margin-bottom: 50px
+
+  #section-four
+    overflow-x: hidden
+    .container
+      width: 90%
+      margin-bottom: 30px
+      overflow-x: scroll
+      .for-mobile
+        width: 1280px
+
+
+@media screen and (max-width: 1150px)
+  #header-background
+    .content-inside
+      width: 90%
+      .wrapper
+        .curly
+          font-size: 70px
+        .big
+          font-size: 40px
+        .double-input
+          input
+            display: block
+            width: 100%
+          button
+            margin-top: 20px
+            width: 336px
+
+@media screen and (max-width: 710px)
+  #header-background
+    .content-inside
+      width: 90%
+      text-align: center
+      border: none
+      &::before
+        display: none
+      &::after
+        display: none
+      .wrapper
+        margin-left: 0
+        .double-input
+          display: flex
+          flex-direction: column
+          align-items: center
+          .search-form
+            width: 90%
+            margin-right: 0
+          button
+            width: 90%
+
+@media screen and (max-width: 850px)
+  #second-section
+    .row
+      flex-direction: column
+      text-align: center
+      .left-side
+        margin-bottom: 50px
+
+@media screen and (max-width: 1050px)
+  #section-fifth
+    .story-img
+      .holder
+        width: 90%
+        .slides
+          .slider
+            width: 50%
+
+      .container
+        width: 96%
+
+@media screen and (max-width: 750px)
+  #section-fifth
+    .story-img
+      .holder
+        .slides
+          .slider
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            .left-side
+              .image
+                display: none
+              span
+                display: none
+              .curly-font
+                line-height: 0.8
+            .right-side
+              p
+                font-size: 18px
+                text-align: center
+
+@media screen and (max-width: 1400px)
+  #challenged-area
+    .container
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 90%
+      .accordion
+        width: 100%
+        height: auto
+        flex-direction: column
+        margin-top: 40px
+
+        .page
+          flex-direction: column
+          width: 100%
+          text-align: center
+          align-items: center
+          justify-content: center
+          height: 150px
+          overflow: visible
+
+          .left-area
+            padding: 0
+          .right-area
+            p
+              width: auto
+
+        .expand
+          height: 240px
+
+        span
+          display: none
+
+@media screen and (max-width: 500px)
+  h3
+    font-size: 25px
+    width: 90%
+
+  #header-background
+    .content-inside
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+
+      .wrapper
+        margin-top: 0
+
+  #section-three
+    display: flex
+    flex-direction: column
+    align-items: center
+    .container
+      width: 100%
+      align-items: center
+      display: flex
+      flex-direction: column
+      .cards
+        width: 90%
+        .card
+          width: 100%
+          &:hover
+            .overlay
+              .cards-par
+                opacity: 1
+
+          .overlay
+            .cards-par
+              opacity: 0
+
+  #challenged-area
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  #section-fifth
+    display: flex
+    flex-direction: column
+    align-items: center
